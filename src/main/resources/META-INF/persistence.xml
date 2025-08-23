@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="CFSecDbPU" transaction-type="RESOURCE_LOCAL">
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecClusterBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecHostNodeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecISOCcyBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecISOCtryBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecISOCtryCcyBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecISOCtryLangBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecISOLangBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecISOTZoneBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSecAppBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSecDeviceBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSecFormBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSecGroupBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSecGroupFormBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSecGrpIncBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSecGrpMembBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSecSessionBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSecUserBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecServiceBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecServiceTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecSysClusterBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecTenantBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecTSecGroupBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecTSecGrpIncBuff</class>
+        <class>org.msscf.msscf.v2_13.cfsecdb.CFSecTSecGrpMembBuff</class>
+        <properties>
+            <!-- Example properties, adjust for your DBMS -->
+            <property name="hibernate.transaction.jta.platform" value="org.hibernate.engine.transaction.jta.platform.internal.SpringJtaPlatform"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/cfclidb"/>
+            <property name="jakarta.persistence.jdbc.user" value="youruser"/>
+            <property name="jakarta.persistence.jdbc.password" value="yourpassword"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="CFIntDbPU" transaction-type="RESOURCE_LOCAL">
+        <class>org.msscf.msscf.v2_13.cfintdb.CFIntLicenseBuff</class>
+        <class>org.msscf.msscf.v2_13.cfintdb.CFIntMajorVersionBuff</class>
+        <class>org.msscf.msscf.v2_13.cfintdb.CFIntMimeTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfintdb.CFIntMinorVersionBuff</class>
+        <class>org.msscf.msscf.v2_13.cfintdb.CFIntSubProjectBuff</class>
+        <class>org.msscf.msscf.v2_13.cfintdb.CFIntTldBuff</class>
+        <class>org.msscf.msscf.v2_13.cfintdb.CFIntTopDomainBuff</class>
+        <class>org.msscf.msscf.v2_13.cfintdb.CFIntTopProjectBuff</class>
+        <class>org.msscf.msscf.v2_13.cfintdb.CFIntURLProtocolBuff</class>
+        <properties>
+            <!-- Example properties, adjust for your DBMS -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/dbtestdb"/>
+            <property name="jakarta.persistence.jdbc.user" value="youruser"/>
+            <property name="jakarta.persistence.jdbc.password" value="yourpassword"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="CFBamDbPU" transaction-type="RESOURCE_LOCAL">
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamAtomBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamBlobColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamBlobDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamBlobTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamBoolColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamBoolDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamBoolTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamChainBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamClearDepBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamClearSubDep1Buff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamClearSubDep2Buff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamClearSubDep3Buff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamClearTopDepBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDateColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDateDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDateTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash128ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash128DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash128GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash128TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash160ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash160DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash160GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash160TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash224ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash224DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash224GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash224TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash256ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash256DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash256GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash256TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash384ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash384DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash384GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash384TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash512ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash512DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash512GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDbKeyHash512TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDelDepBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDelSubDep1Buff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDelSubDep2Buff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDelSubDep3Buff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDelTopDepBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDoubleColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDoubleDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamDoubleTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamEnumDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamEnumTagBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamEnumTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamFloatColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamFloatDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamFloatTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamId16GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamId32GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamId64GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamIndexBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamIndexColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamInt16ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamInt16DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamInt16TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamInt32ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamInt32DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamInt32TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamInt64ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamInt64DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamInt64TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamNmTokenColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamNmTokenDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamNmTokensColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamNmTokensDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamNmTokensTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamNmTokenTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamNumberColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamNumberDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamNumberTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamParamBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamPopDepBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamPopSubDep1Buff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamPopSubDep2Buff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamPopSubDep3Buff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamPopTopDepBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamRelationBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamRelationColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamSchemaDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamSchemaRefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamScopeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamServerListFuncBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamServerMethodBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamServerObjFuncBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamServerProcBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamStringColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamStringDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamStringTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTableBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTableColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTextColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTextDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTextTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTimeColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTimeDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTimestampColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTimestampDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTimestampTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTimeTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTokenColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTokenDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTokenTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTZDateColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTZDateDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTZDateTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTZTimeColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTZTimeDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTZTimestampColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTZTimestampDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTZTimestampTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamTZTimeTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUInt16ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUInt16DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUInt16TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUInt32ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUInt32DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUInt32TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUInt64ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUInt64DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUInt64TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUuid6ColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUuid6DefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUuid6GenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUuid6TypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUuidColBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUuidDefBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUuidGenBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamUuidTypeBuff</class>
+        <class>org.msscf.msscf.v2_13.cfbamdb.CFBamValueBuff</class>
+        <properties>
+            <!-- Example properties, adjust for your DBMS -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/dbtestdb"/>
+            <property name="jakarta.persistence.jdbc.user" value="youruser"/>
+            <property name="jakarta.persistence.jdbc.password" value="yourpassword"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
