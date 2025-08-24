@@ -149,6 +149,19 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <version>${spring.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <classifier>spring-boot</classifier>
+                            <mainClass>
+                                org.msscf.msscf.v2_13.CFCli.CFCli
+                            </mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
