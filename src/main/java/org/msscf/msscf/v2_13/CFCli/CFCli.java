@@ -295,13 +295,14 @@ public class CFCli {
 					case 2:
 						testOnly = true;
 						toolsetName = null;
-						String msg = "org.msscf.msscf.CFCli.CFCli build_string model_name_or_uri cartridge_name [toolsetName{ toolsetName}]\n"
+						String msg = "org.msscf.msscf.CFCli.CFCli build_string model_name_or_uri cartridge_name [debug] [toolsetName{ toolsetName}]\n"
 							+ "\tWHERE\n"
 							+ "\t\tbuild_string is the name of the build to be manufactured,\n"
 							+ "\t\tmodel_name_or_uri is the name of the application model to generate,\n"
 							+ "\t\t\tor the URI of a model definition file to load.\n"
 							+ "\t\tcartridge_name is the name of the rule cartridge to use\n"
 							+ "\t\t\tfor generating code.\n"
+							+ "\t\tdebug means to turn on debug tracing of rule expansions\n"
 							+ "\t\ttoolsetName[s] are the names of the toolsets to produce code for";
 						log.message( msg );
 						throw new IllegalArgumentException( msg );
@@ -318,10 +319,18 @@ public class CFCli {
 						for( int idxArg = 3; idxArg < args.length; idxArg ++ ) {
 							toolsetName = args[idxArg];
 							if( ( toolsetName != null ) && ( toolsetName.length() > 0 ) ) {
-								listOfToolsetName.add( toolsetName );
+								if (toolsetName.equalsIgnoreCase("debug")) {
+									MssCFEngine.enableDebugMode();
+								}
+								else {
+									listOfToolsetName.add( toolsetName );
+								}
 							}
 						}
-						break; 
+						if (listOfToolsetName.isEmpty()) {
+							toolsetName = null;
+						}
+						break;
 				}
 		
 		//		Load the user preferences
