@@ -141,12 +141,6 @@
       <artifactId>org.msscf.msscf.v2_13.cfbam.CFBamRam</artifactId>
       <version>2.13.11197</version>
     </dependency>
-    <dependency>
-      <groupId>org.msscf.msscf.v2_13</groupId>
-      <artifactId>org.msscf.msscf.v2_13.cfkbase</artifactId>
-      <version>3.0</version>
-    </dependency>
-    
   </dependencies>
 
   <build>
