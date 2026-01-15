@@ -3,7 +3,7 @@
 /*
  *  MSS Code Factory MssCF 2.13 CLI
  *
- *	Copyright (C) 2016-2025 Mark Stephen Sobkow
+ *	Copyright (C) 2016-2026 Mark Stephen Sobkow
  *	
  *	This program is free software: you can redistribute it and/or modify
  *	it under the terms of the GNU General Public License as published by
