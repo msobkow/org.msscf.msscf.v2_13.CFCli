@@ -147,12 +147,12 @@
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus release repository</name>
-			<url>http://nexus3.io.github.msobkow:8081/repository/markhome.server-hosted/</url>
+			<url>http://nexus3.msobkow.github.io:8081/repository/msobkow.github.io-hosted/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<name>Nexus release repository</name>
-			<url>http://nexus3.io.github.msobkow:8081/repository/markhome.server-hosted/</url>
+			<url>http://nexus3.msobkow.github.io:8081/repository/msobkow.github.io-hosted/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -168,6 +168,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
+				<version>3.1.4</version>
 				<configuration>
 					<skip>true</skip>
 				</configuration>
@@ -187,7 +188,7 @@
 				</executions>
 				<configuration>
 					<serverId>nexus</serverId>
-					<nexusUrl>http://nexus3.io.github.msobkow:8081/repository/markhome.server-hosted/</nexusUrl>
+					<nexusUrl>http://nexus3.msobkow.github.io:8081/repository/msobkow.github.io-hosted/</nexusUrl>
 					<skipStaging>true</skipStaging>
 				</configuration>
 			</plugin>
