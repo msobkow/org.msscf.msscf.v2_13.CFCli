@@ -3,24 +3,21 @@
 /*
  *  MSS Code Factory MssCF 2.13 CLI
  *
- *	Copyright (C) 2016-2026 Mark Stephen Sobkow
+ *	Copyright (c) 2016-2026 Mark Stephen Sobkow
  *	
- *	This program is free software: you can redistribute it and/or modify
- *	it under the terms of the GNU General Public License as published by
- *	the Free Software Foundation, either version 3 of the License, or
- *	(at your option) any later version.
+ *	This file is part of Mark's Code Fractal formerly known as MSS Code Factory.
  *	
- *	This program is distributed in the hope that it will be useful,
- *	but WITHOUT ANY WARRANTY; without even the implied warranty of
- *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *	GNU General Public License for more details.
+ *	Licensed under the Apache License, Version 2.0 (the "License");
+ *	you may not use this file except in compliance with the License.
+ *	You may obtain a copy of the License at
  *	
- *	You should have received a copy of the GNU General Public License
- *	along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+ *	http://www.apache.org/licenses/LICENSE-2.0
  *	
- *	If you wish to modify and use this code without publishing your changes,
- *	or integrate it with proprietary code, please contact Mark Stephen Sobkow
- *	for a commercial license at mark.sobkow@gmail.com
+ *	Unless required by applicable law or agreed to in writing, software
+ *	distributed under the License is distributed on an "AS IS" BASIS,
+ *	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *	See the License for the specific language governing permissions and
+ *	limitations under the License.
  */
 
 package org.msscf.msscf.v2_13.CFCli;
